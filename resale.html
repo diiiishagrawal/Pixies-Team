@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resale Your Outfit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Resale Your Outfit</h1>
+    <form id="resaleForm">
+        <label for="outfitType">Choose Outfit Type:</label>
+        <select id="outfitType" name="outfitType">
+            <option value="dress">Dress</option>
+            <option value="jeans">Jeans</option>
+            <option value="top">Top</option>
+            <option value="skirt">Skirt</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="material">Choose Material:</label>
+        <select id="material" name="material">
+            <option value="cotton">Cotton</option>
+            <option value="wool">Wool</option>
+            <option value="silk">Silk</option>
+            <option value="denim">Denim</option>
+            <option value="polyester">Polyester</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="age">How Old is It?</label>
+        <select id="age" name="age">
+            <option value="less_than_1_year">Less than 1 year</option>
+            <option value="1_to_2_years">1-2 years</option>
+            <option value="2_to_3_years">2-3 years</option>
+            <option value="more_than_3_years">More than 3 years</option>
+        </select>
+
+        <label for="color">Choose Color:</label>
+        <input type="text" id="color" name="color" placeholder="Enter color">
+
+        <label for="price">Price You Want to Sell For ($):</label>
+        <input type="number" id="price" name="price" placeholder="Enter price">
+
+        <label for="photos">Upload Photos of Your Clothes:</label>
+        <input type="file" id="photos" name="photos" accept="image/*" multiple>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('resaleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const outfitType = document.getElementById('outfitType').value;
+            const material = document.getElementById('material').value;
+            const age = document.getElementById('age').value;
+            const color = document.getElementById('color').value;
+            const price = document.getElementById('price').value;
+            const photos = document.getElementById('photos').files;
+
+            console.log('Outfit Type:', outfitType);
+            console.log('Material:', material);
+            console.log('Age:', age);
+            console.log('Color:', color);
+            console.log('Price:', price);
+
+            console.log('Photos:');
+            Array.from(photos).forEach((file, index) => {
+                console.log(Photo ${index + 1}:, file.name);
+            });
+        });
+    </script>
+
+</body>
+</html>

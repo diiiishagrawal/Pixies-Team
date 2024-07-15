@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .notification-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff3f6c;
+        }
+        .recommendation {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7f9;
+            border-radius: 4px;
+        }
+        .buy-btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .buy-btn:hover {
+            background-color: #0056b3;
+        }
+        .image{
+            height:170px;
+            width:140px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification-container">
+        <h2>New Arrival Notification</h2>
+        <div class="recommendation">
+            <img class="image" src="https://assets.ajio.com/medias/sys_master/root/20230623/uHQh/6495d718a9b42d15c9cbd157/-473Wx593H-441693239-darkgrey-MODEL.jpg">
+            <p>We recommend you buy these jeans it matches your previous purchase: Men's fabricated shirt.</p>
+            <button class="buy-btn" onclick="buyJeans()">Buy Jeans</button>
+        </div>
+    </div>
+
+    <script>
+        function buyJeans() {
+            alert("Redirecting to buy jeans...");
+            // Add redirect logic here if needed
+        }
+    </script>
+
+</body>
+</html>
